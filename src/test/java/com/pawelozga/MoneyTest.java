@@ -17,6 +17,19 @@ class MoneyTest {
 
     }
 
+    @Test
+    void testEqualsWhenSame(){
+        Money toEqual = new Money(50.0f, Money.Currency.EUR);
+        Assertions.assertTrue(money.equals(toEqual));
+    }
+
+    @Test
+    void testEqualsWhenNotSame(){
+        Money toEqual = new Money(49.9f, Money.Currency.EUR);
+        Assertions.assertFalse(money.equals(toEqual));
+
+    }
+
 
 
 

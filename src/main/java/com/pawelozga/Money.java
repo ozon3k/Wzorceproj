@@ -35,19 +35,21 @@ public class Money {
     }
 
     @Override
-    public boolean equals(Object o){
+    public boolean equals(Object o) {
 
-        if (o instanceof Money){
+        if (o instanceof Money) {
             Money moneyToEqual = (Money) o;
 
-            if (moneyToEqual.getCurrency().equals(this.getCurrency())){
-                if(moneyToEqual.getKwota() == this.getKwota()){return true;}else{return false;}
+            if (moneyToEqual.getCurrency().equals(this.getCurrency())) {
+                if (moneyToEqual.getKwota() == this.getKwota()) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         }
         return false;
     }
-
-
 
 
     @Override
