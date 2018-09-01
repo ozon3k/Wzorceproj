@@ -20,12 +20,19 @@ public class Singleton {
         return instance;
     }
 
+    public String getProperty(String key){
+        return mapa.get(key);
+    }
+
+
+
+
     public Singleton() {
         this.mapa = new HashMap<>();
         try {
             Files.readAllLines(Paths.get("C:\\Users\\Jerzy\\ozon3k\\plik.txt")).stream().forEach(value -> {
-                String[] array= value.split("=");
-            mapa.put(array[0],array[1]);});
+                String[] mapka= value.split("=");
+            mapa.put(mapka[0],mapka[1]);});
 
         } catch (IOException e) {
             e.printStackTrace();
